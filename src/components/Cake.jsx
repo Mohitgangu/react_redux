@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { RESTOCK_CAKE, BUY_CAKE } from '../utils/redux/store';
-import { store } from '../utils/redux/store';
+import { RESTOCK_CAKE, BUY_CAKE } from '../utils/redux/Cake';
+import { cakeReducer } from '../utils/redux/Cake';
 import { useDispatch, useSelector } from 'react-redux';
 
 const Cake = () => {
@@ -8,7 +8,7 @@ const Cake = () => {
     const[q,setQ]=useState(0)
     const dispatch= useDispatch()
    const {numOfCakes} = useSelector((store) => {
-        return store
+        return store.Cake
     })
 
   return (
